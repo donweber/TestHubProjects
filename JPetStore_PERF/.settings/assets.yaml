@@ -1,0 +1,272 @@
+name: JPetStore_PERF
+version: 2
+projectReferences: 
+  - /ControlRepo
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /JPetStore_PERF/src
+        type: javaClasspath
+  - name: BrowseJPetStore.recdata
+  - name: BrowseJPetStore.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /JPetStore_PERF/BrowseJPetStore.recdata
+        type: recsessionRecdata
+  - name: BrowseJPetStore.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.5.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.http'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1F072C4794755C0CFD7E53636316564
+    dependencies: 
+      - path: /JPetStore_PERF/BrowseJPetStore.recsession
+        type: testRecsession
+  - name: BrowseJPetStore_1754485873006.stats
+    type: com.ibm.rational.test.lt.stats.session
+    properties: 
+      startTime: 1754485873006
+      tags: 
+      testId: A1F072C4794755C0CFD7E53636316564
+      testName: BrowseJPetStore
+    dependencies: 
+      - path: /JPetStore_PERF/BrowseJPetStore.testsuite
+        type: statsSessionTest
+      - path: /JPetStore_PERF/BrowseJPetStore_1754485873006_orch!system.mstats
+        type: statsSessionStore
+      - path: /JPetStore_PERF/BrowseJPetStore_1754485873006_orch!system.rstats
+        type: statsSessionStore
+      - path: /JPetStore_PERF/BrowseJPetStore_1754485873006_perf!localhost.mstats
+        type: statsSessionStore
+      - path: /JPetStore_PERF/BrowseJPetStore_1754485873006_perf!localhost.rstats
+        type: statsSessionStore
+      - path: /JPetStore_PERF/BrowseJPetStore_1754485884940.executiondlr
+        type: statsSessionAsset
+  - name: BrowseJPetStore_1754485873006_orch!system.mstats
+  - name: BrowseJPetStore_1754485873006_orch!system.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: BrowseJPetStore_1754485873006_perf!localhost.mstats
+  - name: BrowseJPetStore_1754485873006_perf!localhost.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: BrowseJPetStore_1754485884940.executiondlr
+  - name: BrowseJPetStore_1754487598733.stats
+    type: com.ibm.rational.test.lt.stats.session
+    properties: 
+      startTime: 1754487598733
+      tags: 
+      testId: A1F072C4794755C0CFD7E53636316564
+      testName: BrowseJPetStore
+    dependencies: 
+      - path: /JPetStore_PERF/BrowseJPetStore.testsuite
+        type: statsSessionTest
+      - path: /JPetStore_PERF/BrowseJPetStore_1754487598733_orch!system.mstats
+        type: statsSessionStore
+      - path: /JPetStore_PERF/BrowseJPetStore_1754487598733_orch!system.rstats
+        type: statsSessionStore
+      - path: /JPetStore_PERF/BrowseJPetStore_1754487598733_perf!localhost.mstats
+        type: statsSessionStore
+      - path: /JPetStore_PERF/BrowseJPetStore_1754487598733_perf!localhost.rstats
+        type: statsSessionStore
+      - path: /JPetStore_PERF/BrowseJPetStore_1754487599360.executiondlr
+        type: statsSessionAsset
+  - name: BrowseJPetStore_1754487598733_orch!system.mstats
+  - name: BrowseJPetStore_1754487598733_orch!system.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: BrowseJPetStore_1754487598733_perf!localhost.mstats
+  - name: BrowseJPetStore_1754487598733_perf!localhost.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: BrowseJPetStore_1754487599360.executiondlr
+  - name: Browse_JPetStore.recdata
+  - name: Browse_JPetStore.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /JPetStore_PERF/Browse_JPetStore.recdata
+        type: recsessionRecdata
+  - name: BuyCat.recdata
+  - name: BuyCat.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /JPetStore_PERF/BuyCat.recdata
+        type: recsessionRecdata
+  - name: BuyCat.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.5.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.http'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1F072CE10D3A2A0CFD7E53636316564
+    dependencies: 
+      - path: /ControlRepo/JPetStore_PERF/ParameterizeJPetStore.dcrules
+        type: testDataCorrelationRules
+      - path: /JPetStore_PERF/BuyCat.recsession
+        type: testRecsession
+  - name: BuyCat_1754489133125.stats
+    type: com.ibm.rational.test.lt.stats.session
+    properties: 
+      startTime: 1754489133125
+      tags: 
+      testId: A1F072CE10D3A2A0CFD7E53636316564
+      testName: BuyCat
+    dependencies: 
+      - path: /JPetStore_PERF/BuyCat.testsuite
+        type: statsSessionTest
+      - path: /JPetStore_PERF/BuyCat_1754489133125_orch!system.mstats
+        type: statsSessionStore
+      - path: /JPetStore_PERF/BuyCat_1754489133125_orch!system.rstats
+        type: statsSessionStore
+      - path: /JPetStore_PERF/BuyCat_1754489133125_perf!localhost.mstats
+        type: statsSessionStore
+      - path: /JPetStore_PERF/BuyCat_1754489133125_perf!localhost.rstats
+        type: statsSessionStore
+      - path: /JPetStore_PERF/BuyCat_1754489133704.executiondlr
+        type: statsSessionAsset
+  - name: BuyCat_1754489133125_orch!system.mstats
+  - name: BuyCat_1754489133125_orch!system.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: BuyCat_1754489133125_perf!localhost.mstats
+  - name: BuyCat_1754489133125_perf!localhost.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: BuyCat_1754489133704.executiondlr
+  - name: BuyDog.recdata
+  - name: BuyDog.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /JPetStore_PERF/BuyDog.recdata
+        type: recsessionRecdata
+  - name: BuyDog.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.5.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.http'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1F072C7997C1670CFD7E53636316564
+    dependencies: 
+      - path: /JPetStore_PERF/BuyDog.recsession
+        type: testRecsession
+  - name: BuyDog_1754486915406.stats
+    type: com.ibm.rational.test.lt.stats.session
+    properties: 
+      startTime: 1754486915406
+      tags: 
+      testId: A1F072C7997C1670CFD7E53636316564
+      testName: BuyDog
+    dependencies: 
+      - path: /JPetStore_PERF/BuyDog.testsuite
+        type: statsSessionTest
+      - path: /JPetStore_PERF/BuyDog_1754486915406_orch!system.mstats
+        type: statsSessionStore
+      - path: /JPetStore_PERF/BuyDog_1754486915406_orch!system.rstats
+        type: statsSessionStore
+      - path: /JPetStore_PERF/BuyDog_1754486915406_perf!localhost.mstats
+        type: statsSessionStore
+      - path: /JPetStore_PERF/BuyDog_1754486915406_perf!localhost.rstats
+        type: statsSessionStore
+      - path: /JPetStore_PERF/BuyDog_1754486916105.executiondlr
+        type: statsSessionAsset
+  - name: BuyDog_1754486915406_orch!system.mstats
+  - name: BuyDog_1754486915406_orch!system.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: BuyDog_1754486915406_perf!localhost.mstats
+  - name: BuyDog_1754486915406_perf!localhost.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: BuyDog_1754486916105.executiondlr
+  - name: BuyDog_1754488468178.stats
+    type: com.ibm.rational.test.lt.stats.session
+    properties: 
+      startTime: 1754488468178
+      tags: 
+      testId: A1F072C7997C1670CFD7E53636316564
+      testName: BuyDog
+    dependencies: 
+      - path: /JPetStore_PERF/BuyDog.testsuite
+        type: statsSessionTest
+      - path: /JPetStore_PERF/BuyDog_1754488468178_orch!system.mstats
+        type: statsSessionStore
+      - path: /JPetStore_PERF/BuyDog_1754488468178_orch!system.rstats
+        type: statsSessionStore
+      - path: /JPetStore_PERF/BuyDog_1754488468178_perf!localhost.mstats
+        type: statsSessionStore
+      - path: /JPetStore_PERF/BuyDog_1754488468178_perf!localhost.rstats
+        type: statsSessionStore
+      - path: /JPetStore_PERF/BuyDog_1754488468670.executiondlr
+        type: statsSessionAsset
+  - name: BuyDog_1754488468178_orch!system.mstats
+  - name: BuyDog_1754488468178_orch!system.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: BuyDog_1754488468178_perf!localhost.mstats
+  - name: BuyDog_1754488468178_perf!localhost.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: BuyDog_1754488468670.executiondlr
+  - name: JPetStore_Schedule.testsuite
+    type: com.ibm.rational.test.lt.schedule
+    version: 11.0.5.0
+    properties: 
+      description: 'Stages:
+
+	users=5; duration=Run Until Finished
+
+Buyers: Group Size 50.0 percent
+
+	Test(s): BuyCat,BuyDog
+
+Browsers: Group Size 50.0 percent
+
+	Test(s): BrowseJPetStore
+
+'
+      name: JPetStore_Schedule
+      type: com.ibm.rational.test.common.schedule.Schedule
+      uid: A1F072CEC5361250CFD7E53636316564
+    dependencies: 
+      - path: /JPetStore_PERF/BrowseJPetStore.testsuite
+        type: scheduleInvokedTest
+      - path: /JPetStore_PERF/BuyCat.testsuite
+        type: scheduleInvokedTest
+      - path: /JPetStore_PERF/BuyDog.testsuite
+        type: scheduleInvokedTest
+  - name: JPetStore_Schedule_1754489546356.stats
+    type: com.ibm.rational.test.lt.stats.session
+    properties: 
+      startTime: 1754489546356
+      tags: 
+      testId: A1F072CEC5361250CFD7E53636316564
+      testName: JPetStore_Schedule
+    dependencies: 
+      - path: /JPetStore_PERF/JPetStore_Schedule.testsuite
+        type: statsSessionTest
+      - path: /JPetStore_PERF/JPetStore_Schedule_1754489546356_orch!system.mstats
+        type: statsSessionStore
+      - path: /JPetStore_PERF/JPetStore_Schedule_1754489546356_orch!system.rstats
+        type: statsSessionStore
+      - path: /JPetStore_PERF/JPetStore_Schedule_1754489546356_perf!localhost.mstats
+        type: statsSessionStore
+      - path: /JPetStore_PERF/JPetStore_Schedule_1754489546356_perf!localhost.rstats
+        type: statsSessionStore
+      - path: /JPetStore_PERF/JPetStore_Schedule_1754489563550.executiondlr
+        type: statsSessionAsset
+  - name: JPetStore_Schedule_1754489546356_orch!system.mstats
+  - name: JPetStore_Schedule_1754489546356_orch!system.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: JPetStore_Schedule_1754489546356_perf!localhost.mstats
+  - name: JPetStore_Schedule_1754489546356_perf!localhost.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: JPetStore_Schedule_1754489563550.executiondlr
+  - name: Loop_BrowseJPetStore(2).recdata
+  - name: Loop_BrowseJPetStore(2).recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /JPetStore_PERF/Loop_BrowseJPetStore(2).recdata
+        type: recsessionRecdata
+  - name: Loop_BrowseJPetStore.recdata
+  - name: Loop_BrowseJPetStore.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /JPetStore_PERF/Loop_BrowseJPetStore.recdata
+        type: recsessionRecdata
+  - name: ParameterizeJPetStore.dcrules
+    type: com.ibm.rational.test.lt.dcrules
+    version: 8.2.1-7
+  - name: src
+    resources: 

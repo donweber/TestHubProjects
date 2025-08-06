@@ -1,0 +1,29 @@
+<?xml version="1.1" encoding="UTF-8"?><rpt:ruleSet xmlns:rpt="rpt" genuid="13" version="7">
+  <arg:topLevelArgumentContainer xmlns:arg="arg:com.ibm.rational.test.lt.datacorrelation.rules"/>
+  <pass:full xmlns:pass="pass:com.ibm.rational.test.lt.datacorrelation.rules" uid="1" label="Accumulated Actions">
+    <rul:createVariable xmlns:rul="rule:com.ibm.rational.test.lt.datacorrelation.rules" container="InputVariables" uid="2" variableName="CONTEXT" initialValue="jpetstore" scope="USER">
+      <pass:linkDataSourceWithSubstitutions uid="3">
+        <rul:createSubstitution regexp="%CONTEXT%" uid="4" encoded="true">
+          <attributes>
+            <item>req_uri</item>
+          </attributes>
+          <names>
+            <item>jpetstore</item>
+          </names>
+        </rul:createSubstitution>
+      </pass:linkDataSourceWithSubstitutions>
+    </rul:createVariable>
+    <rul:findVariable xmlns:rul="rule:com.ibm.rational.test.lt.datacorrelation.rules" uid="5">
+      <cnd:dataSourceName xmlns:cnd="condition:com.ibm.rational.test.lt.datacorrelation.rules" regexp="\QBuyDog_Host\E(?:_\d+)?" uid="6"/>
+      <pass:findInitialValue uid="7">
+        <rul:createVariable container="InputVariables" uid="8" variableName="IP" initialValue="10.83.146.145" scope="USER"/>
+      </pass:findInitialValue>
+    </rul:findVariable>
+    <rul:findVariable xmlns:rul="rule:com.ibm.rational.test.lt.datacorrelation.rules" uid="9">
+      <cnd:dataSourceName xmlns:cnd="condition:com.ibm.rational.test.lt.datacorrelation.rules" regexp="\QBuyDog_Host_Port\E(?:_\d+)?" uid="10"/>
+      <pass:findInitialValue uid="11">
+        <rul:createVariable container="InputVariables" uid="12" variableName="PORT" initialValue="8085" scope="USER"/>
+      </pass:findInitialValue>
+    </rul:findVariable>
+  </pass:full>
+</rpt:ruleSet>
