@@ -1,7 +1,6 @@
 name: JPetStore_PERF
 version: 2
 projectReferences: 
-  - /ControlRepo
 resources: 
   - name: .classpath
     type: com.ibm.rational.test.lt.classpath
@@ -14,16 +13,6 @@ resources:
     dependencies: 
       - path: /JPetStore_PERF/BrowseJPetStore.recdata
         type: recsessionRecdata
-  - name: BrowseJPetStore.testsuite
-    type: com.ibm.rational.test.lt.test
-    version: 11.0.5.0
-    properties: 
-      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.http'
-      type: com.ibm.rational.test.lt.lttest
-      uid: A1F072C4794755C0CFD7E53636316564
-    dependencies: 
-      - path: /JPetStore_PERF/BrowseJPetStore.recsession
-        type: testRecsession
   - name: BrowseJPetStore_1754485873006.stats
     type: com.ibm.rational.test.lt.stats.session
     properties: 
@@ -32,8 +21,6 @@ resources:
       testId: A1F072C4794755C0CFD7E53636316564
       testName: BrowseJPetStore
     dependencies: 
-      - path: /JPetStore_PERF/BrowseJPetStore.testsuite
-        type: statsSessionTest
       - path: /JPetStore_PERF/BrowseJPetStore_1754485873006_orch!system.mstats
         type: statsSessionStore
       - path: /JPetStore_PERF/BrowseJPetStore_1754485873006_orch!system.rstats
@@ -44,6 +31,8 @@ resources:
         type: statsSessionStore
       - path: /JPetStore_PERF/BrowseJPetStore_1754485884940.executiondlr
         type: statsSessionAsset
+      - path: /JPetStore_PERF/PERF_BrowseJPetStore.testsuite
+        type: statsSessionTest
   - name: BrowseJPetStore_1754485873006_orch!system.mstats
   - name: BrowseJPetStore_1754485873006_orch!system.rstats
     type: com.ibm.rational.test.lt.stats.raw
@@ -59,8 +48,6 @@ resources:
       testId: A1F072C4794755C0CFD7E53636316564
       testName: BrowseJPetStore
     dependencies: 
-      - path: /JPetStore_PERF/BrowseJPetStore.testsuite
-        type: statsSessionTest
       - path: /JPetStore_PERF/BrowseJPetStore_1754487598733_orch!system.mstats
         type: statsSessionStore
       - path: /JPetStore_PERF/BrowseJPetStore_1754487598733_orch!system.rstats
@@ -71,6 +58,8 @@ resources:
         type: statsSessionStore
       - path: /JPetStore_PERF/BrowseJPetStore_1754487599360.executiondlr
         type: statsSessionAsset
+      - path: /JPetStore_PERF/PERF_BrowseJPetStore.testsuite
+        type: statsSessionTest
   - name: BrowseJPetStore_1754487598733_orch!system.mstats
   - name: BrowseJPetStore_1754487598733_orch!system.rstats
     type: com.ibm.rational.test.lt.stats.raw
@@ -90,18 +79,6 @@ resources:
     dependencies: 
       - path: /JPetStore_PERF/BuyCat.recdata
         type: recsessionRecdata
-  - name: BuyCat.testsuite
-    type: com.ibm.rational.test.lt.test
-    version: 11.0.5.0
-    properties: 
-      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.http'
-      type: com.ibm.rational.test.lt.lttest
-      uid: A1F072CE10D3A2A0CFD7E53636316564
-    dependencies: 
-      - path: /ControlRepo/JPetStore_PERF/ParameterizeJPetStore.dcrules
-        type: testDataCorrelationRules
-      - path: /JPetStore_PERF/BuyCat.recsession
-        type: testRecsession
   - name: BuyCat_1754489133125.stats
     type: com.ibm.rational.test.lt.stats.session
     properties: 
@@ -110,8 +87,6 @@ resources:
       testId: A1F072CE10D3A2A0CFD7E53636316564
       testName: BuyCat
     dependencies: 
-      - path: /JPetStore_PERF/BuyCat.testsuite
-        type: statsSessionTest
       - path: /JPetStore_PERF/BuyCat_1754489133125_orch!system.mstats
         type: statsSessionStore
       - path: /JPetStore_PERF/BuyCat_1754489133125_orch!system.rstats
@@ -122,6 +97,8 @@ resources:
         type: statsSessionStore
       - path: /JPetStore_PERF/BuyCat_1754489133704.executiondlr
         type: statsSessionAsset
+      - path: /JPetStore_PERF/PERF_BuyCat.testsuite
+        type: statsSessionTest
   - name: BuyCat_1754489133125_orch!system.mstats
   - name: BuyCat_1754489133125_orch!system.rstats
     type: com.ibm.rational.test.lt.stats.raw
@@ -135,16 +112,6 @@ resources:
     dependencies: 
       - path: /JPetStore_PERF/BuyDog.recdata
         type: recsessionRecdata
-  - name: BuyDog.testsuite
-    type: com.ibm.rational.test.lt.test
-    version: 11.0.5.0
-    properties: 
-      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.http'
-      type: com.ibm.rational.test.lt.lttest
-      uid: A1F072C7997C1670CFD7E53636316564
-    dependencies: 
-      - path: /JPetStore_PERF/BuyDog.recsession
-        type: testRecsession
   - name: BuyDog_1754486915406.stats
     type: com.ibm.rational.test.lt.stats.session
     properties: 
@@ -153,8 +120,6 @@ resources:
       testId: A1F072C7997C1670CFD7E53636316564
       testName: BuyDog
     dependencies: 
-      - path: /JPetStore_PERF/BuyDog.testsuite
-        type: statsSessionTest
       - path: /JPetStore_PERF/BuyDog_1754486915406_orch!system.mstats
         type: statsSessionStore
       - path: /JPetStore_PERF/BuyDog_1754486915406_orch!system.rstats
@@ -165,6 +130,8 @@ resources:
         type: statsSessionStore
       - path: /JPetStore_PERF/BuyDog_1754486916105.executiondlr
         type: statsSessionAsset
+      - path: /JPetStore_PERF/PERF_BuyDog.testsuite
+        type: statsSessionTest
   - name: BuyDog_1754486915406_orch!system.mstats
   - name: BuyDog_1754486915406_orch!system.rstats
     type: com.ibm.rational.test.lt.stats.raw
@@ -180,8 +147,6 @@ resources:
       testId: A1F072C7997C1670CFD7E53636316564
       testName: BuyDog
     dependencies: 
-      - path: /JPetStore_PERF/BuyDog.testsuite
-        type: statsSessionTest
       - path: /JPetStore_PERF/BuyDog_1754488468178_orch!system.mstats
         type: statsSessionStore
       - path: /JPetStore_PERF/BuyDog_1754488468178_orch!system.rstats
@@ -192,6 +157,8 @@ resources:
         type: statsSessionStore
       - path: /JPetStore_PERF/BuyDog_1754488468670.executiondlr
         type: statsSessionAsset
+      - path: /JPetStore_PERF/PERF_BuyDog.testsuite
+        type: statsSessionTest
   - name: BuyDog_1754488468178_orch!system.mstats
   - name: BuyDog_1754488468178_orch!system.rstats
     type: com.ibm.rational.test.lt.stats.raw
@@ -199,33 +166,6 @@ resources:
   - name: BuyDog_1754488468178_perf!localhost.rstats
     type: com.ibm.rational.test.lt.stats.raw
   - name: BuyDog_1754488468670.executiondlr
-  - name: JPetStore_Schedule.testsuite
-    type: com.ibm.rational.test.lt.schedule
-    version: 11.0.5.0
-    properties: 
-      description: 'Stages:
-
-	users=5; duration=Run Until Finished
-
-Buyers: Group Size 50.0 percent
-
-	Test(s): BuyCat,BuyDog
-
-Browsers: Group Size 50.0 percent
-
-	Test(s): BrowseJPetStore
-
-'
-      name: JPetStore_Schedule
-      type: com.ibm.rational.test.common.schedule.Schedule
-      uid: A1F072CEC5361250CFD7E53636316564
-    dependencies: 
-      - path: /JPetStore_PERF/BrowseJPetStore.testsuite
-        type: scheduleInvokedTest
-      - path: /JPetStore_PERF/BuyCat.testsuite
-        type: scheduleInvokedTest
-      - path: /JPetStore_PERF/BuyDog.testsuite
-        type: scheduleInvokedTest
   - name: JPetStore_Schedule_1754489546356.stats
     type: com.ibm.rational.test.lt.stats.session
     properties: 
@@ -234,8 +174,6 @@ Browsers: Group Size 50.0 percent
       testId: A1F072CEC5361250CFD7E53636316564
       testName: JPetStore_Schedule
     dependencies: 
-      - path: /JPetStore_PERF/JPetStore_Schedule.testsuite
-        type: statsSessionTest
       - path: /JPetStore_PERF/JPetStore_Schedule_1754489546356_orch!system.mstats
         type: statsSessionStore
       - path: /JPetStore_PERF/JPetStore_Schedule_1754489546356_orch!system.rstats
@@ -246,6 +184,8 @@ Browsers: Group Size 50.0 percent
         type: statsSessionStore
       - path: /JPetStore_PERF/JPetStore_Schedule_1754489563550.executiondlr
         type: statsSessionAsset
+      - path: /JPetStore_PERF/PERF_JPetStore_Schedule.testsuite
+        type: statsSessionTest
   - name: JPetStore_Schedule_1754489546356_orch!system.mstats
   - name: JPetStore_Schedule_1754489546356_orch!system.rstats
     type: com.ibm.rational.test.lt.stats.raw
@@ -265,6 +205,63 @@ Browsers: Group Size 50.0 percent
     dependencies: 
       - path: /JPetStore_PERF/Loop_BrowseJPetStore.recdata
         type: recsessionRecdata
+  - name: PERF_BrowseJPetStore.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.5.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.http'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1F072C4794755C0CFD7E53636316564
+    dependencies: 
+      - path: /JPetStore_PERF/BrowseJPetStore.recsession
+        type: testRecsession
+  - name: PERF_BuyCat.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.5.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.http'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1F072CE10D3A2A0CFD7E53636316564
+    dependencies: 
+      - path: /JPetStore_PERF/BuyCat.recsession
+        type: testRecsession
+  - name: PERF_BuyDog.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.5.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.http'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1F072C7997C1670CFD7E53636316564
+    dependencies: 
+      - path: /JPetStore_PERF/BuyDog.recsession
+        type: testRecsession
+  - name: PERF_JPetStore_Schedule.testsuite
+    type: com.ibm.rational.test.lt.schedule
+    version: 11.0.5.0
+    properties: 
+      description: 'Stages:
+
+	users=5; duration=Run Until Finished
+
+Buyers: Group Size 50.0 percent
+
+	Test(s): PERF_BuyCat,PERF_BuyDog
+
+Browsers: Group Size 50.0 percent
+
+	Test(s): PERF_BrowseJPetStore
+
+'
+      name: PERF_JPetStore_Schedule
+      type: com.ibm.rational.test.common.schedule.Schedule
+      uid: A1F072CEC5361250CFD7E53636316564
+    dependencies: 
+      - path: /JPetStore_PERF/PERF_BrowseJPetStore.testsuite
+        type: scheduleInvokedTest
+      - path: /JPetStore_PERF/PERF_BuyCat.testsuite
+        type: scheduleInvokedTest
+      - path: /JPetStore_PERF/PERF_BuyDog.testsuite
+        type: scheduleInvokedTest
   - name: ParameterizeJPetStore.dcrules
     type: com.ibm.rational.test.lt.dcrules
     version: 8.2.1-7
